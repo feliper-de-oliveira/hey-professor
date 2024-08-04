@@ -14,7 +14,7 @@ for FILE in $STAGED_FILES
 
 do
 
-    ./vendor/bin/pint "${FILE}" > /dev/null &1;
+    ./vendor/bin/pint "${FILE}" > /dev/null >&1;
 
     git add "${FILE}"
 
