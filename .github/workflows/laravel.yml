@@ -38,6 +38,6 @@ jobs:
         DB_DATABASE: database/database.sqlite
       run: php artisan test --parallel
     - name: Execute Larastan 
-      run: php artisan verndor/bin/phpstan analyse
+      run: php artisan vendor/bin/phpstan analyse
     - name: Execute Laravel Pint
-      run: venodr/bin/pint --test
+      run: php artisan vendor/bin/pint --test
