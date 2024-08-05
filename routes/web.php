@@ -5,7 +5,13 @@ use App\Http\Controllers\QuestionController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+
+    if (app()->isLocal()) {
+        auth()->loginUsingId(1);
+
+        return view('welcome');
+    }
+
 });
 
 Route::get('/dashboard', function () {
